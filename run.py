@@ -22,7 +22,7 @@ def get_country_code():
     for country in country_codes:
         print(f"{country.capitalize()}")
 
-    country_name = input("What Country Would You Like To See?").lower()
+    country_name = input("What Country Would You Like To See?\n").lower()
 
     if country_name in country_codes:
         return country_codes[country_name]
@@ -89,7 +89,7 @@ def run_program():
             n += 1
             print(f"{n} ID: {serie}        Description: {info[n-1]}")
 
-        series_name = input("What Country Would You Like To See?").upper()
+        series_name = input("What Country Would You Like To See?\n").upper()
 
         series_code = series_name
 
