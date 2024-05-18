@@ -1,6 +1,15 @@
+cachetools==5.3.3
+google-auth==2.29.0
+google-auth-oauthlib==1.2.0
+gspread==6.1.2
 inflection==0.5.1
 Nasdaq-Data-Link==1.0.4
 numpy==1.24.4
+oauthlib==3.2.2
 pandas==2.0.3
+pyasn1==0.6.0
+pyasn1_modules==0.4.0
 python-decouple==3.8
+requests-oauthlib==2.0.0
+rsa==4.9
 tzdata==2024.1
