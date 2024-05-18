@@ -45,15 +45,19 @@ def get_series_id():
     'NY.GDP.DEFL.KD.ZG': 'Inflation, GDP deflator (annual %)'
     }
 
-    for serie in series_ids:
-        print(f"{serie}")
-    
-    serie_code = input("What Series Would You Like To See?")
+    n = 0
 
-    if serie_code in series_ids:
-        return series_ids[serie_code]
+    for serie in series_ids:
+        n += 1
+        print(f"{n} {serie}")
+
+    series_name = input("What Country Would You Like To See?").lower()
+
+    if series_name in series_ids:
+        return series_ids[series_name]
     else:
-        print("Series Id not Found")
+        print("Country Code not Found")
+
 
 
 def run_program():
@@ -62,7 +66,34 @@ def run_program():
     while keepGoing == "y":
 
         
-        series_code = get_series_id()
+        #series_code = get_series_id()
+
+        series_ids = {
+        'NY.GDP.MKTP.CD': 'GDP (current US$)',
+        'NY.GDP.PCAP.CD': 'GDP per capita (current US$)',
+        'SP.POP.TOTL': 'Population, total',
+        'NY.GDP.MKTP.KD.ZG': 'GDP growth (annual %)',
+        'EN.ATM.CO2E.KT': 'CO2 emissions (kt)',
+        'IT.NET.USER.ZS': 'Internet users (% of population)',
+        'SE.PRM.TENR': 'Primary completion rate, total (% of relevant age group)',
+        'SP.POP.GROW': 'Population growth (annual %)',
+        'EG.USE.PCAP.KG.OE': 'Energy use (kg of oil equivalent per capita)',
+        'NY.GDP.DEFL.KD.ZG': 'Inflation, GDP deflator (annual %)'
+        }
+
+        n = 0
+
+        info = list(series_ids.values())      
+
+        for serie in series_ids:
+            n += 1
+            print(f"{n} ID: {serie}        Description: {info[n-1]}")
+
+        series_name = input("What Country Would You Like To See?").upper()
+
+        series_code = series_name
+
+        print(f"KODEN R {series_code}")
         country_code = get_country_code()
         
 
