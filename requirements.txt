@@ -1,1 +1,6 @@
-# Your requirements go here
+inflection==0.5.1
+Nasdaq-Data-Link==1.0.4
+numpy==1.24.4
+pandas==2.0.3
+python-decouple==3.8
+tzdata==2024.1
